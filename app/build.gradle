@@ -1,7 +1,10 @@
 plugins {
     id 'java'
+    id 'war'
 }
-
+war{
+    archiveFileName = 'app.war'
+}
 group 'pl.jaz.jazapp'
 version '1.0-SNAPSHOT'
 
@@ -12,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'javax:javaee-api:8.0'
 
     testImplementation 'junit:junit:4.12'
 
